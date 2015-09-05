@@ -1,20 +1,21 @@
 % blank_sheet.ly: blank lined staff paper template
-% Copyright (C) 2013, Brian Clements
+% Copyright (C) 2015, Brian Clements
 
-% This program is free software: you can redistribute it and/or modify
-% it under the terms of the GNU General Public License as published by
-% the Free Software Foundation, either version 3 of the License, or
-% (at your option) any later version.
+% This program is free software: you can redistribute it and/or modify it under
+% the terms of the GNU General Public License as published by the Free Software
+% Foundation, either version 3 of the License, or (at your option) any later
+% version.
 
-% This program is distributed in the hope that it will be useful,
-% but WITHOUT ANY WARRANTY; without even the implied warranty of
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-% GNU General Public License for more details.
+% This program is distributed in the hope that it will be useful, but WITHOUT
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+% FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+% details.
 
-% You should have received a copy of the GNU General Public License
-% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% You should have received a copy of the GNU General Public License along with
+% this program.  If not, see <http://www.gnu.org/licenses/>.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%				Blank Sheets                %%%%%
+%%%%                Blank Sheets                %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include "english.ly"
@@ -22,10 +23,10 @@
 
 #(set-global-staff-size 24)
 
-\header { 
-	footer = ""
-	tagline = ""
-	}
+\header {
+    footer = ""
+    tagline = ""
+    }
 
 \paper {
 	head-separation = 0\mm
@@ -38,23 +39,25 @@
 	}
 
 emptymusic = {
-  	\repeat unfold 12 % Change this for more lines.
-  		{ s1\break }
-		}
+    \repeat unfold 12 % Change this for more lines.
+        { s1\break }
+    }
 
-\layout { 
-  	indent = 0.0\cm
-  	pagenumber = no
-	}
+\layout {
+    indent = 0.0\cm
+    pagenumber = no
+    }
 
-\new Score \with {
-  	\override TimeSignature #'transparent = ##t
-  	\override Clef #'transparent = ##t
-  	defaultBarType = #""
-  	\remove Bar_number_engraver
-  	\remove Clef_engraver
-		} 
+\new Score
+    \with {
+        \override TimeSignature #'transparent = ##t
+        \override Clef #'transparent = ##t
+        defaultBarType = #""
+        \remove Bar_number_engraver
+        \remove Clef_engraver
+        }
 
-	<<
-	\context Staff \emptymusic
-	>>
+    <<
+    \context Staff
+        \emptymusic
+    >>
