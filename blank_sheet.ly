@@ -21,7 +21,7 @@
 \include "english.ly"
 \version "2.16.2"
 
-#(set-global-staff-size 24)
+#(set-global-staff-size 25)
 
 \header {
     footer = ""
@@ -29,14 +29,11 @@
     }
 
 \paper {
-	head-separation = 0\mm
-	top-margin = 7\mm
-	indent = 0\mm
-	after-title-space = 1\mm
-	%between-system-space = 18\mm
-	between-system-padding = #1
-	#(set-paper-size "letter" 'letter)
-	}
+    #(set-paper-size "letter" 'letter)
+    top-margin = 16\mm
+    bottom-margin = 12\mm
+    systems-per-page = 12
+    }
 
 emptymusic = {
     \repeat unfold 12 % Change this for more lines.
