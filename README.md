@@ -6,8 +6,7 @@ This package is part of the [lyTemplates](https://github.com/brianclements/lyTem
 package. It is a LilyPond template for making blank staff paper.
 
 ## Requirements
-This template was created and used extensively with LilyPond 2.10.33 and has
-not yet been tested with newer versions.
+Lilypond 2.16
 
 ## Install
 
